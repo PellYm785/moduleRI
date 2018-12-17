@@ -12,6 +12,8 @@
 
 .menu-ri{
     display: flex;
+    position: sticky;
+  	top: 0;
     padding: 0;
     margin: 0;
     height: 50px;
@@ -38,17 +40,17 @@
     color: #00d7ff !important;
 }
 
-.content-ri{
+
+.section-ri{
+    display: none;
     margin-left: 20px;
     margin-top: 20px;
 }
 
-.section-ri{
-    display: none;
-}
-
 .displayed-section-ri{
     display: block;
+    animation-duration: 1s;
+  	animation-name: fadein;
 }
 
 .category-ri img{
@@ -59,4 +61,17 @@
 .category-ri h2{
     display: inline;
     color: #62b0ff;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: 0px;
+  }
+
+  to {
+    opacity: 100;
+    margin-left: 20px;
+  }
 }
