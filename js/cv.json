@@ -1,0 +1,410 @@
+{
+  "formations": [
+    {
+      "_id_form": "1",
+      "_nom": "BTS SIO",
+      "_etablissement": "Lyc\u00e9e Alienor d Aquitaine",
+      "_ville": "Poitiers",
+      "_debut": {
+        "year": 2017,
+        "month": 9,
+        "day": 0,
+        "hour": false,
+        "minute": false,
+        "second": false,
+        "fraction": false,
+        "warning_count": 1,
+        "warnings": {
+          "11": "The parsed date was invalid"
+        },
+        "error_count": 0,
+        "errors": [],
+        "is_localtime": false
+      },
+      "_fin": "0000-00-00",
+      "_commentaire": ""
+    },
+    {
+      "_id_form": "2",
+      "_nom": "BAC STI2D",
+      "_etablissement": "Lyc\u00e9e Nelson Mandela",
+      "_ville": "Poitiers",
+      "_debut": {
+        "year": 2016,
+        "month": 9,
+        "day": 0,
+        "hour": false,
+        "minute": false,
+        "second": false,
+        "fraction": false,
+        "warning_count": 1,
+        "warnings": {
+          "11": "The parsed date was invalid"
+        },
+        "error_count": 0,
+        "errors": [],
+        "is_localtime": false
+      },
+      "_fin": {
+        "year": 2017,
+        "month": 6,
+        "day": 0,
+        "hour": false,
+        "minute": false,
+        "second": false,
+        "fraction": false,
+        "warning_count": 1,
+        "warnings": {
+          "11": "The parsed date was invalid"
+        },
+        "error_count": 0,
+        "errors": [],
+        "is_localtime": false
+      },
+      "_commentaire": "Obtenu\u00a0: Mention Bien"
+    }
+  ],
+  "typeComp": [
+    {
+      "_id": "1",
+      "_type": "Langages de programmation"
+    },
+    {
+      "_id": "2",
+      "_type": "Programmation Web"
+    },
+    {
+      "_id": "3",
+      "_type": "Base de donn\u00e9es"
+    },
+    {
+      "_id": "4",
+      "_type": "Logiciels"
+    },
+    {
+      "_id": "6",
+      "_type": "Syst\u00e8mes d\u2019exploitaton"
+    },
+    {
+      "_id": "7",
+      "_type": "Langue"
+    },
+    {
+      "_id": "8",
+      "_type": "Qualit\u00e9"
+    },
+    {
+      "_id": "9",
+      "_type": "Frameworks"
+    },
+    {
+      "_id": "10",
+      "_type": "Conception"
+    },
+    {
+      "_id": "11",
+      "_type": "CMS"
+    },
+    {
+      "_id": "12",
+      "_type": "Versioning"
+    },
+    {
+      "_id": "13",
+      "_type": "Design Patterns"
+    }
+  ],
+  "typeNiveau": [
+    {
+      "_id": "1",
+      "_niveau": "Notions"
+    },
+    {
+      "_id": "2",
+      "_niveau": "Interm\u00e9diaire"
+    },
+    {
+      "_id": "3",
+      "_niveau": "Bon niveau"
+    },
+    {
+      "_id": "4",
+      "_niveau": "Avanc\u00e9"
+    },
+    {
+      "_id": "5",
+      "_niveau": "Expert"
+    }
+  ],
+  "competences": {
+    "base_de_donnees": [
+      {
+        "id_comp": "12",
+        "nom": "MySQL",
+        "niveau": "3",
+        "type": "Base de donn\u00e9es"
+      },
+      {
+        "id_comp": "45",
+        "nom": "SQLite",
+        "niveau": "2",
+        "type": "Base de donn\u00e9es"
+      },
+      {
+        "id_comp": "47",
+        "nom": "PostegreSQL",
+        "niveau": "3",
+        "type": "Base de donn\u00e9es"
+      }
+    ],
+    "cms": [
+      {
+        "id_comp": "41",
+        "nom": "Wordpress",
+        "niveau": "3",
+        "type": "CMS"
+      },
+      {
+        "id_comp": "42",
+        "nom": "Prestashop",
+        "niveau": "2",
+        "type": "CMS"
+      }
+    ],
+    "conception": [
+      {
+        "id_comp": "40",
+        "nom": "Merise",
+        "niveau": "3",
+        "type": "Conception"
+      },
+      {
+        "id_comp": "50",
+        "nom": "UML",
+        "niveau": "3",
+        "type": "Conception"
+      }
+    ],
+    "design_patterns": [
+      {
+        "id_comp": "39",
+        "nom": "MVC",
+        "niveau": "3",
+        "type": "Design Patterns"
+      },
+      {
+        "id_comp": "48",
+        "nom": "DAO",
+        "niveau": "4",
+        "type": "Design Patterns"
+      },
+      {
+        "id_comp": "49",
+        "nom": "Singleton",
+        "niveau": "4",
+        "type": "Design Patterns"
+      }
+    ],
+    "frameworks": [
+      {
+        "id_comp": "4",
+        "nom": "jQuery",
+        "niveau": "3",
+        "langage": "Javascript",
+        "type": "Frameworks"
+      },
+      {
+        "id_comp": "32",
+        "nom": "Symphony",
+        "niveau": "3",
+        "langage": "PHP",
+        "type": "Frameworks"
+      },
+      {
+        "id_comp": "51",
+        "nom": "Swing",
+        "niveau": "2",
+        "langage": "Java",
+        "type": "Frameworks"
+      }
+    ],
+    "langages_de_programmation": [
+      {
+        "id_comp": "1",
+        "nom": "C",
+        "niveau": "2",
+        "type": "Langages de programmation"
+      },
+      {
+        "id_comp": "2",
+        "nom": "Java",
+        "niveau": "2",
+        "type": "Langages de programmation"
+      },
+      {
+        "id_comp": "3",
+        "nom": "Javascript",
+        "niveau": "3",
+        "type": "Langages de programmation"
+      },
+      {
+        "id_comp": "6",
+        "nom": "PHP",
+        "niveau": "3",
+        "type": "Langages de programmation"
+      },
+      {
+        "id_comp": "7",
+        "nom": "Bash",
+        "niveau": "1",
+        "type": "Langages de programmation"
+      },
+      {
+        "id_comp": "8",
+        "nom": "Python",
+        "niveau": "1",
+        "type": "Langages de programmation"
+      }
+    ],
+    "langue": [
+      {
+        "id_comp": "24",
+        "nom": "Anglais",
+        "niveau": "2",
+        "type": "Langue"
+      },
+      {
+        "id_comp": "25",
+        "nom": "Allemand",
+        "niveau": "1",
+        "type": "Langue"
+      }
+    ],
+    "logiciels": [
+      {
+        "id_comp": "14",
+        "nom": "Eclipse",
+        "niveau": "0",
+        "type": "Logiciels"
+      },
+      {
+        "id_comp": "15",
+        "nom": "CodeBlocks",
+        "niveau": "0",
+        "type": "Logiciels"
+      },
+      {
+        "id_comp": "16",
+        "nom": "LibreOffice",
+        "niveau": "0",
+        "type": "Logiciels"
+      }
+    ],
+    "programmation_web": [
+      {
+        "id_comp": "9",
+        "nom": "Flask",
+        "niveau": "1",
+        "type": "Programmation Web"
+      },
+      {
+        "id_comp": "10",
+        "nom": "HTML5\/CSS3",
+        "niveau": "3",
+        "type": "Programmation Web"
+      }
+    ],
+    "qualite": [
+      {
+        "id_comp": "26",
+        "nom": "Apprentissage rapide",
+        "type": "Qualit\u00e9"
+      },
+      {
+        "id_comp": "27",
+        "nom": "Bonne m\u00e9moire",
+        "type": "Qualit\u00e9"
+      },
+      {
+        "id_comp": "28",
+        "nom": "Pragmatique",
+        "type": "Qualit\u00e9"
+      },
+      {
+        "id_comp": "29",
+        "nom": "Amical",
+        "type": "Qualit\u00e9"
+      }
+    ],
+    "systemes_d_exploitation": [
+      {
+        "id_comp": "18",
+        "nom": "Windows 10",
+        "niveau": "1",
+        "type": "Syst\u00e8mes d\u2019exploitaton"
+      },
+      {
+        "id_comp": "20",
+        "nom": "Windows 7",
+        "niveau": "1",
+        "type": "Syst\u00e8mes d\u2019exploitaton"
+      },
+      {
+        "id_comp": "21",
+        "nom": "Linux Debian",
+        "niveau": "2",
+        "type": "Syst\u00e8mes d\u2019exploitaton"
+      }
+    ],
+    "versioning": [
+      {
+        "id_comp": "43",
+        "nom": "Git",
+        "niveau": "3",
+        "type": "Versioning"
+      },
+      {
+        "id_comp": "44",
+        "nom": "Subversion",
+        "niveau": "3",
+        "type": "Versioning"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "_id": "1",
+      "_poste": "Webmaster",
+      "_debut": {
+        "year": 2018,
+        "month": 5,
+        "day": 28,
+        "hour": false,
+        "minute": false,
+        "second": false,
+        "fraction": false,
+        "warning_count": 0,
+        "warnings": [],
+        "error_count": 0,
+        "errors": [],
+        "is_localtime": false
+      },
+      "_fin": {
+        "year": 2018,
+        "month": 6,
+        "day": 28,
+        "hour": false,
+        "minute": false,
+        "second": false,
+        "fraction": false,
+        "warning_count": 0,
+        "warnings": [],
+        "error_count": 0,
+        "errors": [],
+        "is_localtime": false
+      },
+      "_organisation": "Entreprise Michelange",
+      "_type": "Stage"
+    }
+  ]
+}
