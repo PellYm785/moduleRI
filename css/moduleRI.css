@@ -49,8 +49,9 @@
 
 .displayed-section-ri{
     display: block;
-    animation-duration: 1s;
-  	animation-name: fadein;
+	animation-duration: 360ms;
+	animation-name: fadein;
+	animation-timing-function: linear;
 }
 
 .category-ri img{
