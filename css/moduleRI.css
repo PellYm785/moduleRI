@@ -64,6 +64,9 @@
     color: #62b0ff;
 }
 
+.details-ri{
+   display: none;
+}
 
 @keyframes fadein {
   from {

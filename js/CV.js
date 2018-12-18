@@ -64,6 +64,7 @@ $.getJSON('js/cv.json',function (cvData) {
             duree = duree + 'De ' + mois[formationData._debut['month'] - 1] + ' ' + formationData._debut['year'] + ' à ';
             duree = duree + mois[formationData._fin['month'] - 1] + ' ' + formationData._fin['year'];
         }
+	formation.add(new Item(duree));
         if (formationData._commentaire != ""){
             formation.add(new Item(formationData._commentaire));
         }
