@@ -5,7 +5,6 @@ $.getJSON('js/cv.json',function (cvData) {
     var formationsData = cvData.formations;
     var typeCompData = cvData.typeComp;
     var typeNiveauData = cvData.typeNiveau;
-
     var mois = [
         "Janvier",
         "Février",
@@ -38,6 +37,7 @@ $.getJSON('js/cv.json',function (cvData) {
             if(type == 'langages_de_programmation'){
                 competencesData[type].forEach(function (competence) {
                     let i = 0;
+			
                     while (i < frameworks.length && !frameworkFound) {
                         if(frameworks[i].langage === competence.nom){
                             detailsComp = '<div>'+frameworks[i].nom+'</div>';
@@ -53,22 +53,17 @@ $.getJSON('js/cv.json',function (cvData) {
                     frameworkFound = false;
                     groupeComp.add(new Item(competence.nom, detailsComp));
 
-
                 });
             }else{
                 competencesData[type].forEach(function (competence) {
                     groupeComp.add(new Item(competence.nom));
                 });
             }
-
+		
             competences.add(groupeComp);
         }
 
-
     }
-
-
-
 
     experiencesData.forEach(function (experience) {
         poste = new Category(experience._type +' '+ experience._poste);
@@ -106,7 +101,6 @@ $.getJSON('js/cv.json',function (cvData) {
     cv.add(formations);
     cv.build();
     console.log(cv);
-
 
     //console.log(experiences);
     //console.log(formations);
