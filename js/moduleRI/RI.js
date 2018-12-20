@@ -98,7 +98,6 @@ RI.prototype.build = function () {
             }
 
             menuLi.classList.add('selected-menu-li-ri');
-            console.log(menuLi.dataset);
             displayedSection = this.content.getElementsByClassName('section-ri')[menuLi.dataset['sectionRi']];
             displayedSection.classList.add('displayed-section-ri');
         }.bind(context));
