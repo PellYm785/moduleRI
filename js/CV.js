@@ -27,15 +27,44 @@ $.getJSON('js/cv.json',function (cvData) {
     var poste = null;
     var formation = null;
     var duree = "";
+    var frameworks = competencesData['frameworks'];
+    var detailsComp = null;
+    var frameworkFound = false;
 
     for (var type in competencesData){
-        groupeComp = new Category(competencesData[type][0].type);
+        if(type != 'frameworks') {
+            groupeComp = new Category(competencesData[type][0].type);
 
-        competencesData[type].forEach(function (competence) {
-            groupeComp.add(new Item(competence.nom,''));
-        });
+            if(type == 'langages_de_programmation'){
+                competencesData[type].forEach(function (competence) {
+                    let i = 0;
+                    while (i < frameworks.length && !frameworkFound) {
+                        if(frameworks[i].langage === competence.nom){
+                            detailsComp = '<div>'+frameworks[i].nom+'</div>';
+                            frameworkFound = true;
+                            console.log(detailsComp);
+                        }else {
+                            detailsComp = null;
+                        }
 
-        competences.add(groupeComp);
+                        i++;
+                    }
+                    console.log(detailsComp);
+                    frameworkFound = false;
+                    groupeComp.add(new Item(competence.nom, detailsComp));
+
+
+                });
+            }else{
+                competencesData[type].forEach(function (competence) {
+                    groupeComp.add(new Item(competence.nom));
+                });
+            }
+
+            competences.add(groupeComp);
+        }
+
+
     }
 
 

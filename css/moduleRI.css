@@ -64,6 +64,20 @@
     color: #62b0ff;
 }
 
+.item-ri{
+    display: flex;
+}
+
+.item-ri p{
+    display: inline-block;
+}
+
+.button-details-ri{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
 .details-ri{
    display: none;
 }
