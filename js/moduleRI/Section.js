@@ -1,7 +1,6 @@
 function Section (name){
     this.name = name;
-    this.content = document.createElement('div');
-    this.content.className = 'section-ri'
+    this.content = document.createElement('section-ri');
 }
 
 Section.prototype.add = function(category){

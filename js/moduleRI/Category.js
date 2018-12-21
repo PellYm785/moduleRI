@@ -1,12 +1,11 @@
 function Category(name, img) {
     var nameNode = document.createTextNode(name);
 
-    this.category = document.createElement('div');
+    this.category = document.createElement('category-ri');
     this.icon = document.createElement('img');
     this.title = document.createElement('h2');
     this.list = document.createElement('ul');
 
-    this.category.className = 'category-ri';
     this.icon.setAttribute('src', img);
     this.title.appendChild(nameNode);
 

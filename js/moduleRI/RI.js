@@ -4,13 +4,9 @@
 function RI(containerId) {
     this.sections = null;
     this.containerId = containerId;
-    this.ri = document.createElement('div');
-    this.menu = document.createElement('ul');
-    this.content = document.createElement('div');
-
-    this.ri.className = 'ri';
-    this.menu.className = 'menu-ri';
-    this.content.className = 'content-ri';
+    this.ri = document.createElement('ri');
+    this.menu = document.createElement('menu-ri');
+    this.content = document.createElement('content-ri');
 
     this.ri.appendChild(this.menu);
     this.ri.appendChild(this.content);
@@ -98,7 +94,7 @@ RI.prototype.build = function () {
             }
 
             menuLi.classList.add('selected-menu-li-ri');
-            displayedSection = this.content.getElementsByClassName('section-ri')[menuLi.dataset['sectionRi']];
+            displayedSection = this.content.getElementsByTagName('section-ri')[menuLi.dataset['sectionRi']];
             displayedSection.classList.add('displayed-section-ri');
         }.bind(context));
 
@@ -106,7 +102,7 @@ RI.prototype.build = function () {
         this.content.appendChild(section.content);
 
         firstMenuLi = this.menu.getElementsByTagName('li')[0];
-        firstSection = this.content.getElementsByClassName('section-ri')[0];
+        firstSection = this.content.getElementsByTagName('section-ri')[0];
         firstMenuLi.classList.add('selected-menu-li-ri');
         firstSection.classList.add('displayed-section-ri');
 
