@@ -72,6 +72,11 @@ RI.prototype.build = function () {
     var firstMenuLi = null;
     var firstSection = null;
     var i = 0;
+    var riHeight = null;
+    var riWidth = null;
+    var riTop = null;
+    var riLeft = null;
+    var detailsList = null;
 
     this.sections.forEach(function (section) {
         textNodemenu = document.createTextNode(section.name);
@@ -109,6 +114,18 @@ RI.prototype.build = function () {
         i++;
     }.bind(context));
 
+    detailsList = this.ri.getElementsByTagName('details-ri');
+
     container.appendChild(this.ri);
+
+    riHeight = this.ri.offsetHeight;
+    riWidth = this.ri.offsetWidth;
+    riTop = this.ri.offsetTop;
+    riLeft = this.ri.offsetLeft;
+
+    for(var i = 0; i<detailsList.length; i++){
+        detailsList[i].style.top = (riTop + (riHeight - detailsList[i].offsetHeight) /2)+'px';
+        detailsList[i].style.left = (riLeft + (riWidth - detailsList[i].offsetWidth) /2)+'px';
+    }
 }
 
