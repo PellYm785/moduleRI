@@ -42,6 +42,10 @@ menu-ri li:last-of-type{
     color: #00d7ff !important;
 }
 
+.popup-displayed{
+    filter: brightness(0.5);
+}
+
 
 section-ri{
     display: none;

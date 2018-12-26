@@ -8,10 +8,12 @@ function Item(text, details) {
     this.content = document.createElement('p');
     this.boutonDetails = null;
     this.details = null;
+    this.animation = null;
+    this.displayedDetails = false;
 
     this.content.appendChild(textNode);
     this.item.appendChild(this.content);
-
+    this.category = null;
 
     if (details) {
         this.details = document.createElement('details-ri');
@@ -22,43 +24,65 @@ function Item(text, details) {
 
         this.boutonDetails.setAttribute('height', 25);
         this.boutonDetails.setAttribute('width', 25);
-        this.boutonDetails.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
         this.boutonDetails.innerHTML += boutonDetails;
 
         this.item.appendChild(this.boutonDetails);
-        this.item.appendChild(this.details);
+        document.body.appendChild(this.details);
 
         this.details.innerHTML += details;
 
         this.boutonDetails.addEventListener('click', function (event) {
-                this.animation.showSlideDown('medium');
-            }.bind(context)
-        );
+                if (!this.displayedDetails) {
+                    this.displayedDetails = true;
+                    this.animation.showSlideDown('medium');
+                }else {
+                    this.displayedDetails = false;
+                    this.animation.hideSlideUp('medium');
+                }
+        }.bind(context));
+    }
+
+    this.addContent = function (text) {
+        this.content.innerText = text;
+    }
+
+    this.deleteContent = function () {
+        this.content.innerText = "";
+    }
+
+    this.addDetails = function (details) {
+        if (!this.details) {
+            this.details = document.createElement('div');
+            this.details.classList.add('details-ri');
+            document.appendChild(this.details);
+        }
+
+        this.details.innerHTML += details;
+    }
+
+        this.addDetails = function (details) {
+        if (!this.details) {
+            this.details = document.createElement('div');
+            this.details.classList.add('details-ri');
+            document.body.appendChild(this.details);
+        }
+
+        this.details.innerHTML += details;
+    };
+
+    this.deleteDetails = function () {
+        if (!this.details) {
+            throw 'No details is set'
+        }
+        this.details.remove();
+    };
+
+    this.setOriginPositionPopup = function (top, left){
+        if(this.details) {
+            this.details.style.top = top + 'px';
+            this.details.style.left = left + 'px';
+            this.animation.defaultTop = top;
+            this.animation.defaultLeft = left;
+        }
     }
 }
-
-Item.prototype.addContent = function (text) {
-    this.content.innerText = text;
-};
-
-Item.prototype.deleteContent = function () {
-    this.content.innerText = "";
-};
-
-Item.prototype.addDetails = function (details) {
-    if (!this.details) {
-        this.details = document.createElement('div');
-        this.details.classList.add('details-ri');
-        this.item.appendChild(this.details);
-    }
-
-    this.details.innerHTML += details;
-};
-
-Item.prototype.deleteDetails = function () {
-    if (!this.details) {
-        throw 'No details is set'
-    }
-    this.details.remove();
-};
-

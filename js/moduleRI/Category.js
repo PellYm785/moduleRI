@@ -5,6 +5,7 @@ function Category(name, img) {
     this.icon = document.createElement('img');
     this.title = document.createElement('h2');
     this.list = document.createElement('ul');
+    this.listItem = [];
 
     this.icon.setAttribute('src', img);
     this.title.appendChild(nameNode);
@@ -12,24 +13,31 @@ function Category(name, img) {
     this.category.appendChild(this.icon);
     this.category.appendChild(this.title);
     this.category.appendChild(this.list);
-}
+    this.section = null;
+    this.idItem = 0;
 
-Category.prototype.add = function(item){
-    if(item instanceof Item) {
+    this.add = function(item){
+        if(!item instanceof Item) {
+            throw 'It isn\'t Item object';
+        }
+
+        item.item.setAttribute('data-item-id', this.idItem);
+        item.category = this;
+
+        this.listItem.push(item);
         this.list.appendChild(item.item);
-    }else {
-        throw 'It isn\'t Item object';
-    }
-};
+        this.idItem++;
+    };
 
-Category.prototype.delete = function(item){
-    if(!this.items){
-        throw 'No items is set';
-    }
-    if(item instanceof Item) {
-        throw 'It isn\'t Item object';
-    }
+    this.delete = function(item){
+        if(!this.items){
+            throw 'No items is set';
+        }
+        if(item instanceof Item) {
+            throw 'It isn\'t Item object';
+        }
 
-    return this.list.removeChild(item);
-};
+        return this.list.removeChild(item);
+    };
 
+}

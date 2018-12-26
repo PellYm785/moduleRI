@@ -1,26 +1,31 @@
 function Section (name){
     this.name = name;
     this.content = document.createElement('section-ri');
-}
+    this.listCategory = [];
+    this.idCategory = 0;
+    this.ri = null;
 
-Section.prototype.add = function(category){
-    if(category instanceof Category) {
+    this.add = function(category){
+        if(!category instanceof Category) {
+            throw 'It isn\'t Category object';
+        }
+
+        this.listCategory.push(category);
         this.content.appendChild(category.category);
-    }else {
-        throw 'It isn\'t Category object';
-    }
-};
+        this.idCategory++;
+        category.section = this;
+        category.category.setAttribute('data-category-id', this.idCategory);
+    };
 
-Section.prototype.delete = function(category){
-    if(!this.categories){
-        throw 'No categories is set';
-    }
+    this.delete = function(category){
+        if(!this.categories){
+            throw 'No categories is set';
+        }
 
-    if(category instanceof Category) {
+        if(!category instanceof Category) {
+            throw 'It isn\'t Category object';
+        }
+
         this.content.removeChild(category);
-    }else {
-        throw 'It isn\'t Category object';
-    }
-
-
+    };
 }

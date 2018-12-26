@@ -42,14 +42,13 @@ $.getJSON('js/cv.json',function (cvData) {
                         if(frameworks[i].langage === competence.nom){
                             detailsComp = '<div>'+frameworks[i].nom+'</div>';
                             frameworkFound = true;
-                            console.log(detailsComp);
                         }else {
                             detailsComp = null;
                         }
 
                         i++;
                     }
-                    console.log(detailsComp);
+
                     frameworkFound = false;
                     groupeComp.add(new Item(competence.nom, detailsComp));
 
@@ -100,7 +99,6 @@ $.getJSON('js/cv.json',function (cvData) {
     cv.add(experiences);
     cv.add(formations);
     cv.build();
-    console.log(cv);
 
     //console.log(experiences);
     //console.log(formations);
