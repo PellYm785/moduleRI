@@ -32,6 +32,7 @@ menu-ri li{
     height: 70%;
     color: white;
     border-right: 1px white solid;
+    cursor: pointer;
 }
 
 menu-ri li:last-of-type{
@@ -41,11 +42,6 @@ menu-ri li:last-of-type{
 .selected-menu-li-ri{
     color: #00d7ff !important;
 }
-
-.popup-displayed{
-    filter: brightness(0.5);
-}
-
 
 section-ri{
     display: none;
@@ -82,15 +78,28 @@ item-ri p{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
+    cursor: pointer;
 }
 
-details-ri{
+popup{
     display: none;
     position: absolute;
     background-color: white ;
     box-shadow: 0px 0px 4px 1px #969696;
-    padding: 10px;
+    padding: 20px;
 }
+
+.popup-displayed{
+    filter: brightness(0.7);
+}
+
+.close-popup{
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+}
+
 
 @keyframes fadein {
   from {

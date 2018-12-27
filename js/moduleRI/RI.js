@@ -120,12 +120,9 @@ function RI(containerId) {
             section.listCategory.forEach(function(category){
                 category.listItem.forEach(function (item) {
                     if (item.details) {
-                        item.setOriginPositionPopup(
-                            riTop + (riHeight - item.details.offsetHeight) / 2,
-                            riLeft + (riWidth - item.details.offsetWidth) / 2
-                        );
+                        item.details.setParent(this.ri);
                     }
-                });
+                }.bind(context));
             });
         });
     }
