@@ -67,11 +67,6 @@ function RI(containerId) {
         var firstMenuLi = null;
         var firstSection = null;
         var i = 0;
-        var riHeight = null;
-        var riWidth = null;
-        var riTop = null;
-        var riLeft = null;
-        var detailsList = [];
 
         this.listSection.forEach(function (section) {
             textNodemenu = document.createTextNode(section.name);
@@ -88,7 +83,7 @@ function RI(containerId) {
 
                 if (!menuLi.classList.contains('selected-menu-li-ri')) {
                     var menuLiSelected = this.menu.getElementsByClassName('selected-menu-li-ri')[0];
-                    var hiddenSection = this.content.getElementsByClassName('displayed-section-ri')[0];
+                    var hiddenSection  = this.content.getElementsByClassName('displayed-section-ri')[0];
                     menuLiSelected.classList.remove('selected-menu-li-ri');
                     hiddenSection.classList.remove('displayed-section-ri');
                 }
@@ -110,11 +105,6 @@ function RI(containerId) {
         }.bind(context));
 
         container.appendChild(this.ri);
-
-        riHeight = this.ri.offsetHeight;
-        riWidth = this.ri.offsetWidth;
-        riTop = this.ri.offsetTop;
-        riLeft = this.ri.offsetLeft;
 
         this.listSection.forEach(function(section){
             section.listCategory.forEach(function(category){
