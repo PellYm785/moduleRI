@@ -3,8 +3,6 @@ $.getJSON('js/cv.json',function (cvData) {
     var competencesData = cvData.competences;
     var experiencesData = cvData.experiences;
     var formationsData = cvData.formations;
-    var typeCompData = cvData.typeComp;
-    var typeNiveauData = cvData.typeNiveau;
     var mois = [
         "Janvier",
         "Février",
