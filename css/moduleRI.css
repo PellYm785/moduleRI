@@ -4,6 +4,7 @@ ri{
     display: block;
     overflow: auto;
     border: 1px #969696 solid;
+    border-radius: 2px;
     background-color: white;
     font-family: Arial;
 }
@@ -19,7 +20,8 @@ menu-ri{
     padding: 0;
     margin: 0;
     height: 50px;
-    background-color: #363636;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px #969696;
 }
 
 menu-ri li{
@@ -30,8 +32,9 @@ menu-ri li{
     flex-direction: column;
     text-align: center;
     height: 70%;
-    color: white;
-    border-right: 1px white solid;
+    color: #7b7b7b;
+    font-weight: bold;
+    border-right: 1px #bfbfbf solid;
     cursor: pointer;
 }
 
@@ -40,7 +43,7 @@ menu-ri li:last-of-type{
 }
 
 .selected-menu-li-ri{
-    color: #00d7ff !important;
+    color: #0076ff !important;
 }
 
 section-ri{
